@@ -1,14 +1,17 @@
 package com.example.myproject;
 
+//import android.util.Log;
+
 public class Music {
     private String strAlbum;
-    private Integer intYearReleased;
-
+    private String intYearReleased;
+    //String year= String.valueOf(intYearReleased);
+   // Log.d("DEBUG","year");
     public String getStrAlbum() {
         return strAlbum;
     }
 
-    public Integer getIntYearReleased() {
+    public String getIntYearReleased() {
         return intYearReleased;
     }
 }
