@@ -1,4 +1,4 @@
-package com.example.myproject;
+package com.example.myproject.presentation.model;
 
 //import android.util.Log;
 

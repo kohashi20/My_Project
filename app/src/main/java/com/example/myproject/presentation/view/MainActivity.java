@@ -1,4 +1,4 @@
-package com.example.myproject;
+package com.example.myproject.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,12 +9,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.myproject.Constants;
+import com.example.myproject.R;
+import com.example.myproject.data.MusicAPI;
+import com.example.myproject.presentation.model.Music;
+import com.example.myproject.presentation.model.RestMusicResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -22,7 +26,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Query;
 
 public class MainActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://www.theaudiodb.com/";
