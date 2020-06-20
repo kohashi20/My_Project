@@ -1,15 +1,13 @@
 package com.example.myproject.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.myproject.Constants;
-import com.example.myproject.data.MusicAPI;
+import com.example.myproject.Singletons;
 import com.example.myproject.presentation.model.Music;
 import com.example.myproject.presentation.model.RestMusicResponse;
 import com.example.myproject.presentation.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -18,10 +16,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-import static com.example.myproject.Constants.BASE_URL;
 
 public class MainController {
     private SharedPreferences sharedPreferences;
@@ -44,14 +38,7 @@ public class MainController {
     }
     private void makeAPICall(){
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        MusicAPI musicAPI = retrofit.create(MusicAPI.class);
-
-        Call<RestMusicResponse> call = musicAPI.getMusicResponse();
+        Call<RestMusicResponse> call = Singletons.getMusicAPI().getMusicResponse();
         call.enqueue(new Callback<RestMusicResponse>() {
             @Override
             public void onResponse(Call<RestMusicResponse> call, Response<RestMusicResponse> response) {

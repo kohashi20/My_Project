@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.myproject.Constants;
+import com.example.myproject.Singletons;
 import com.example.myproject.data.MusicAPI;
 import com.example.myproject.R;
 import com.example.myproject.presentation.controller.MainController;
@@ -41,10 +42,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         controller = new MainController(
                 this,
-                new GsonBuilder()
-                        .setLenient()
-                        .create(),
-                getSharedPreferences("Music_Application", Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getSharedPreferences(getApplicationContext())
 );
         controller.onStart();
         //showList();
