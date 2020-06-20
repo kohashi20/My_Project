@@ -1,4 +1,6 @@
-package com.example.myproject;
+package com.example.myproject.presentation.model;
+
+import com.example.myproject.presentation.model.Music;
 
 import java.util.List;
 

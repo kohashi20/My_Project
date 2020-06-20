@@ -2,7 +2,6 @@ package com.example.myproject.presentation.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.Toast;
 
 import com.example.myproject.Constants;
 import com.example.myproject.data.MusicAPI;
@@ -30,13 +29,12 @@ public class MainController {
     private MainActivity view;
 
     public MainController(MainActivity view, Gson gson, SharedPreferences sharedPreferences) {
-        this.view = view;
-        this.gson= gson;
+    this.view= view;
+    this.gson= gson;
     this.sharedPreferences= sharedPreferences;
     }
 
     public void onStart(){
-
         List<Music> musicList = getDataFromCache();
         if(musicList !=null){
             view.showList(musicList);
@@ -108,4 +106,3 @@ public class MainController {
 
     }
 }
-
