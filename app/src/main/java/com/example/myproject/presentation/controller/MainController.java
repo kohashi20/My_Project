@@ -82,7 +82,7 @@ public class MainController {
         }
     }
     public void onItemClick(Music music){
-
+        view.navigateToDetails(music);
     }
 
     public void onButtonAClick(){
