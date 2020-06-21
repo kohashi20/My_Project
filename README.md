@@ -26,4 +26,16 @@ L'application est codée en Java.
 ## Fonctionnalités
 * Premier écran, dès le lancement de l'application
 
-![alt text](Images/Capture1.PNG)
+![alt text](Images/Capture1.PNG "1e écran")
+
+* Second écran, quand on clique sur "Everyday Life"
+
+![alt_text](Images/Capture2.PNG "2nd écran Everyday Life")
+
+* Premier écran en mode avion
+
+![alt_text](Images/Capture3.PNG "1e écran mode avion")
+
+* Second écran, quand on clique sur "Greatest Songs" en mode avion
+
+![alt_text](Images/Capture4.PNG "2nd écran Greatest Songs mode avion")
