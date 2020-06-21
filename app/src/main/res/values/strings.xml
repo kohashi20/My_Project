@@ -3,4 +3,5 @@
     <string name="todo">TODO</string>
     <string name="description">Description</string>
     <string name="example_application">Example application</string>
+    <string name="ecran_detail">Ecran detail</string>
 </resources>

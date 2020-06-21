@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -67,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(Music music) {
-        Toast.makeText(this, "navigate", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
+        myIntent.putExtra("musicKeyAlbum", Singletons.getGson().toJson(music));
+        //myIntent.putExtra("musickeyYear", music.getIntYearReleased());
+        MainActivity.this.startActivity(myIntent);
 
     }
 }
