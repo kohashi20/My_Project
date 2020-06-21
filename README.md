@@ -25,4 +25,5 @@ L'application est codée en Java.
 
 ## Fonctionnalités
 * Premier écran, dès le lancement de l'application
+
 ![alt text](Images/Capture1.PNG)
